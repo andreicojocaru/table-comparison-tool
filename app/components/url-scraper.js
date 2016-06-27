@@ -12,10 +12,14 @@ export default Ember.Component.extend({
       this.set('imgSrc', imgs[1]);
     }
   }),
-  actions: {
-    start() {
+  init() {
+    this._super(...arguments);
+    if(this.get('url')) {
+      this.makeAjaxCall();
+    }
+  },
+  makeAjaxCall() {
       var url = "https://crossorigin.me/" + this.get('url');
-      var regex = this.get('imgRgx');
 
       return this.get('ajax').request(url, {
         dataType: 'text'
@@ -25,6 +29,5 @@ export default Ember.Component.extend({
       }).catch((reason) => {
         console.error('Error while getting page', url, reason);
       });
-    }
   }
 });

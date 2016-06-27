@@ -1,2 +1,18 @@
-{{outlet}}
-{{url-scraper}}
+<table>
+  <thead>
+    {{#each tableHeadColumns as |head|}}
+      {{head}}
+    {{/each}}
+  </thead>
+  <tbody>
+    {{#each model as |car|}}
+      {{car-row car=car}}
+    {{/each}}
+    <tr>
+      <td>
+        {{input value=newCarUrl}}
+        <button {{action 'addCar'}}>+</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

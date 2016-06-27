@@ -1,11 +1,22 @@
 /* jshint node: true */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   var ENV = {
     modulePrefix: 'comparison-tool',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'script-src': '\'self\' \'unsafe-eval\' apis.google.com',
+      'frame-src': '\'self\' https://*.firebaseapp.com',
+      'connect-src': '\'self\' wss://*.firebaseio.com https://*.googleapis.com'
+    },
+    firebase: {
+      apiKey: "AIzaSyCty2ywzHQZWRARBRVbS_rI81AoPU6fncA",
+      authDomain: "comparison-d6f39.firebaseapp.com",
+      databaseURL: "https://comparison-d6f39.firebaseio.com",
+      storageBucket: "comparison-d6f39.appspot.com",
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
