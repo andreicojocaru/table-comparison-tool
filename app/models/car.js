@@ -5,7 +5,7 @@ import attr from 'ember-data/attr';
 export default Model.extend({
   url: attr('string'),
   imageUrl: attr('string'),
-  year: attr('string'),
+  year: attr('number'),
   panoramicRoof: attr('boolean'),
   autoAc: attr('boolean'),
   leather: attr('boolean'),

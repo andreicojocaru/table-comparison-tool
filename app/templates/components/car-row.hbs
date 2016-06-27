@@ -7,7 +7,7 @@
     {{/if}}
   </td>
   <td>
-    {{car.year}}
+    {{display-string model=car value="year"}}
   </td>
   <td>
     {{display-yesno model=car value="panoramicRoof"}}
@@ -28,6 +28,6 @@
     {{display-yesno model=car value="parkingSensors"}}
   </td>
   <td>
-    {{car.wheelSize}}
+    {{display-string model=car value="wheelSize"}}
   </td>
 </tr>

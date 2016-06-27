@@ -1,1 +1,11 @@
-{{yield}}
+{{#if isEditing}}
+  {{input value=newValue}}
+  <button class="btn btn-flat" {{action 'edit'}}>
+    <i class="glyphicon glyphicon-ok"></i>
+  </button>
+{{else}}
+  <button class="btn btn-flat btn-lg" {{action 'toggleEditing'}}>
+    {{modelValue}}
+  </button>
+{{/if}}
+
