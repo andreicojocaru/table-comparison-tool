@@ -1,6 +1,10 @@
 <tr>
   <td>
-    {{url-scraper url=car.url}}
+    {{#if car.imageUrl}}
+      <img class="img-responsive img-thumbnail" src="{{car.imageUrl}}"/>
+    {{else}}
+      {{url-scraper url=car.url}}
+    {{/if}}
   </td>
   <td>
     {{car.year}}

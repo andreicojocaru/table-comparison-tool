@@ -15,7 +15,7 @@ module.exports = function (environment) {
       apiKey: "AIzaSyCty2ywzHQZWRARBRVbS_rI81AoPU6fncA",
       authDomain: "comparison-d6f39.firebaseapp.com",
       databaseURL: "https://comparison-d6f39.firebaseio.com",
-      storageBucket: "comparison-d6f39.appspot.com",
+      storageBucket: "comparison-d6f39.appspot.com"
     },
     EmberENV: {
       FEATURES: {

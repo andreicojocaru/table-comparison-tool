@@ -7,9 +7,11 @@ export default Ember.Controller.extend({
     addCar() {
       var newCarUrl = this.get('newCarUrl');
 
-      if (!newCarUrl) {return;}
+      if (!newCarUrl) {
+        return;
+      }
 
-      var model = this.store.createRecord({
+      var model = this.store.createRecord('car', {
         url: newCarUrl
       });
 
