@@ -12,7 +12,8 @@ export default Ember.Controller.extend({
     'Heated seats',
     'Sat NAV',
     'Parking sensors',
-    'Wheel size'],
+    'Wheel size',
+    'Price'],
   tableRows: Ember.computed.alias('model'),
   actions: {
     addCar() {

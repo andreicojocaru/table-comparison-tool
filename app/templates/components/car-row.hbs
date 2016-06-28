@@ -1,15 +1,17 @@
 <tr>
   <td>
-    {{#if car.imageUrl}}
-      <img class="img-responsive img-thumbnail" src="{{car.imageUrl}}"/>
-    {{else}}
-      {{url-scraper url=car.url updateAction="updateImage"}}
-    {{/if}}
-    <p>
-      <button class="btn btn-danger" {{action "remove"}}>
-        <i class="glyphicon glyphicon-remove">Remove</i>
-      </button>
-    </p>
+    <a href="{{car.url}}" target="_blank">
+      {{#if car.imageUrl}}
+        <img class="img-responsive img-thumbnail" src="{{car.imageUrl}}"/>
+      {{else}}
+        {{url-scraper url=car.url updateAction="updateImage"}}
+      {{/if}}
+      <p>
+        <button class="btn btn-danger" {{action "remove"}}>
+          <i class="glyphicon glyphicon-remove">Remove</i>
+        </button>
+      </p>
+    </a>
   </td>
   <td>
     {{display-string model=car value="regNumber"}}
@@ -41,5 +43,7 @@
   <td>
     {{display-string model=car value="wheelSize"}}
   </td>
-
+    <td>
+    {{display-string model=car value="price" isNumber=true}}
+  </td>
 </tr>

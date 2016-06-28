@@ -14,5 +14,6 @@ export default Model.extend({
   heatedSeats: attr('boolean'),
   satNav: attr('boolean'),
   parkingSensors: attr('boolean'),
-  wheelSize: attr('string')
+  wheelSize: attr('string'),
+  price: attr('number')
 });
