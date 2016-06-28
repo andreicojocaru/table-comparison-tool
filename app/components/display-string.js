@@ -11,6 +11,13 @@ export default Ember.Component.extend({
   actions: {
     toggleEditing() {
       this.toggleProperty('isEditing');
+
+      //todo: kinda ugly -> make an focusable-input component instead
+      if(this.get('isEditing')) {
+         Ember.run.scheduleOnce('afterRender', this, function() {
+            $('.input-edit')[0].focus();
+        });
+      }
     },
     edit() {
       var newValue = this.get('newValue');

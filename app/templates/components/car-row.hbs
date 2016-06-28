@@ -3,8 +3,19 @@
     {{#if car.imageUrl}}
       <img class="img-responsive img-thumbnail" src="{{car.imageUrl}}"/>
     {{else}}
-      {{url-scraper url=car.url}}
+      {{url-scraper url=car.url updateAction="updateImage"}}
     {{/if}}
+    <p>
+      <button class="btn btn-danger" {{action "remove"}}>
+        <i class="glyphicon glyphicon-remove">Remove</i>
+      </button>
+    </p>
+  </td>
+  <td>
+    {{display-string model=car value="regNumber"}}
+  </td>
+  <td>
+    {{display-string model=car value="mileage"}}
   </td>
   <td>
     {{display-string model=car value="year"}}
@@ -30,4 +41,5 @@
   <td>
     {{display-string model=car value="wheelSize"}}
   </td>
+
 </tr>

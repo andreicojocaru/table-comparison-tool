@@ -5,6 +5,8 @@ import attr from 'ember-data/attr';
 export default Model.extend({
   url: attr('string'),
   imageUrl: attr('string'),
+  regNumber: attr('string'),
+  mileage: attr('number'),
   year: attr('number'),
   panoramicRoof: attr('boolean'),
   autoAc: attr('boolean'),

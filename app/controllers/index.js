@@ -1,7 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  tableHeadColumns: ['URL', 'Year', 'Panoramic Roof', 'Auto AC', 'Leather', 'Heated seats', 'Sat NAV', 'Parking sensors', 'Wheels'],
+  tableHeadColumns: [
+    'URL',
+    'Reg Number',
+    'Mileage',
+    'Year',
+    'Panoramic Roof',
+    'Auto AC',
+    'Leather',
+    'Heated seats',
+    'Sat NAV',
+    'Parking sensors',
+    'Wheel size'],
   tableRows: Ember.computed.alias('model'),
   actions: {
     addCar() {
