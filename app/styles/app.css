@@ -14,3 +14,7 @@ th, td {
 .btn-flat {
     background: transparent;
 }
+
+td .btn {
+  white-space: normal;
+}

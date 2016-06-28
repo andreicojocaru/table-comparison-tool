@@ -9,11 +9,12 @@ export default Model.extend({
   mileage: attr('number'),
   year: attr('number'),
   panoramicRoof: attr('boolean'),
-  autoAc: attr('boolean'),
   leather: attr('boolean'),
   heatedSeats: attr('boolean'),
   satNav: attr('boolean'),
   parkingSensors: attr('boolean'),
   wheelSize: attr('string'),
-  price: attr('number')
+  warranty: attr('string'),
+  price: attr('number'),
+  extraDetails: attr('string')
 });

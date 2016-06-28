@@ -7,13 +7,14 @@ export default Ember.Controller.extend({
     'Mileage',
     'Year',
     'Panoramic Roof',
-    'Auto AC',
     'Leather',
     'Heated seats',
     'Sat NAV',
     'Parking sensors',
     'Wheel size',
-    'Price'],
+    'Warranty',
+    'Price',
+    'Extra details'],
   tableRows: Ember.computed.alias('model'),
   actions: {
     addCar() {
