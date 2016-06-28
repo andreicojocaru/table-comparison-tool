@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   model: null,
   value: null,
   isEditing: false,
+  isNumber: false,
   newValue: Ember.computed.alias('modelValue'),
   modelValue: Ember.computed('value', function () {
     return this.get('model').get(this.get('value'));

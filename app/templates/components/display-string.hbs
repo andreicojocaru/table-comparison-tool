@@ -5,7 +5,11 @@
   </button>
 {{else}}
   <button class="btn btn-flat btn-lg" {{action 'toggleEditing'}}>
-    {{modelValue}}
+    {{#if isNumber}}
+        {{format-number modelValue format="0,0"}}
+      {{else}}
+        {{modelValue}}
+    {{/if}}
   </button>
 {{/if}}
 
