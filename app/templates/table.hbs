@@ -1,0 +1,40 @@
+<div class="container-fluid">
+{{#each model as |table|}}
+  <div class="table-responsive">
+    <table class="table table-bordered table-condensed table-striped ">
+      <thead>
+        <tr>
+          {{#each table.columns as |head|}}
+          <th>
+            {{head.title}}
+          </th>
+          {{/each}}
+          <th>
+            {{input class="form-control" value=newColumnTitle enter=(action "addColumn" table)}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each table.rows as |row|}}
+          <tr>
+            {{#each row.cells as |cell|}}
+              <td>
+                {{display-cell cell=cell}}
+              </td>
+            {{/each}}
+          </tr>
+        {{/each}}
+        <tr>
+          {{input class="form-control" value=newRowTitle enter=(action "addRow" table)}}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {{else}}
+  No tables found!
+  <button class="btn" {{action "addTable"}}>
+    <i class="glyphicon glyphicon-plus"></i>
+    Add Table
+  </button>
+{{/each}}
+</div>
